@@ -40,7 +40,7 @@ resources:
     source:
       uri: ((spring-petclinic-repo-uri))
       branch: test
-    webhook_token: wealkTokenToChange
+    webhook_token: ((webhook_token))
     check_every: 24h
 ##########################################################################################
 ## - Here is the same definition for the git repo containing the test-scripts
@@ -91,7 +91,7 @@ jobs:
     serial: true
     plan:
       - get: spring-petclinic
-        trigger: false
+        trigger: true
       - get: test-scripts
       - put: slack
         params:
