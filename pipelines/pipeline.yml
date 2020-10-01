@@ -41,7 +41,7 @@ resources:
       uri: ((spring-petclinic-repo-uri))
       branch: test
     webhook_token: wealkTokenToChange
-      check_every: 24h
+    check_every: 24h
 ##########################################################################################
 ## - Here is the same definition for the git repo containing the test-scripts
 ##########################################################################################  
